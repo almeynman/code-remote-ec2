@@ -12,7 +12,10 @@ npm run deploy
 
 Add new SSH host: in VSCode with action panel run "Remote-SSH: Add new SSH Host"
 ```
-ssh -i "path-to-key-file" ubuntu@<instance-public-dns> # public dns looks like ec2-3-121-112-32.eu-central-1.compute.amazonaws.com
+ssh -i "path-to-key-file" ubuntu@<instance-public-dns> 
+
+# public dns looks like ec2-3-121-112-32.eu-central-1.compute.amazonaws.com
+# key-file is the one you created in step 1
 ```
 
 Connect to machine: with action panel run "Remote-SSH: Connect to Host"
