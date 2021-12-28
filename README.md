@@ -26,7 +26,8 @@ source ~/.bashrc
 nvm install v14.17.0
 echo 'export NPM_TOKEN=<your-npm-token>' >> ~/.bashrc
 npm install --global yarn
-git clone https://<github-user>:<personal-token>@github.com/mazedesignhq/maze-monorepo.git
+git clone https://<github-user>:<personal-token>@github.com/<username>/<repository-name>.git
 cd maze-monorepo
-yarn
 ```
+
+Follow instructions from your repository
