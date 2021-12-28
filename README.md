@@ -7,6 +7,9 @@ Also populate your AWS Account Number and region in .env file
 
 
 ```
+npm install
+```
+```
 npm run deploy
 ```
 
