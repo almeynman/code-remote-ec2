@@ -62,22 +62,6 @@ export class CodeRemoteEc2Stack extends cdk.Stack {
       }]
     });
 
-    instance.addUserData(`#!/bin/sh
-
-cd /home/ubuntu
-sudo apt update
-sudo apt-get install build-essential
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-nvm install v14.17.0
-echo 'export NPM_TOKEN=${process.env.NPM_TOKEN}' >> ~/.bashrc
-npm install --global yarn
-echo 'custom initialization complete
-
-https://github.com/mazedesignhq/maze-monorepo.git
-git clone https://${process.env.GITHUB_USER}:${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}@github.com/mazedesignhq/maze-monorepo.git
-cd maze-monorepo
-yarn
-`)
-    instance.instance.addPropertyOverride("KeyName", "almas-macbook-pro-2020");
+    instance.instance.addPropertyOverride("KeyName", process.env.SSH_KEY_NAME);
   }
 }
