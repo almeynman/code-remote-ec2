@@ -44,8 +44,9 @@ Now in VS Code you can open your repository
 
 Follow instructions from your repository
 
+Set up Docker following [this instructions](https://docs.docker.com/engine/install/ubuntu/)
+
+
 # Change AMI Image
 
 You might want to deploy a different [AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) image if you change AWS region or the OS of the image. For this modify [this line](https://github.com/almeynman/code-remote-ec2/blob/ac4dab34b32fab4689e4101eccf2442e65b24bfa/lib/code-remote-ec2-stack.ts#L47). [AMI selection](https://cloud-images.ubuntu.com/locator/ec2/)
-
-Setting up Docker following [this instructions](https://docs.docker.com/engine/install/ubuntu/)
