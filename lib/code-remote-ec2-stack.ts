@@ -44,8 +44,8 @@ export class CodeRemoteEc2Stack extends cdk.Stack {
     // https://cloud-images.ubuntu.com/locator/ec2/
     // owner: 099720109477 (ubuntu)
     const imgLinuxUbu = new ec2.GenericLinuxImage({
-      // "eu-central-1": "ami-0d527b8c289b4af7f", //  Ubuntu Server 20.04 LTS amd64
-      "eu-central-1": "ami-0245697ee3e07e755", //  Debian 10 amd64
+      "eu-central-1": "ami-0d527b8c289b4af7f", //  Ubuntu Server 20.04 LTS amd64
+      // "eu-central-1": "ami-0245697ee3e07e755", //  Debian 10 amd64
     });
 
     const instance = new ec2.Instance(this, "CsEc2Instance", {
