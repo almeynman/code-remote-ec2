@@ -58,7 +58,7 @@ export class CodeRemoteEc2Stack extends cdk.Stack {
       ),
       securityGroup: secGrp,
       blockDevices: [{
-        deviceName: '/dev/xvda', // Run `aws ec2 describe-images --region us-east-1 --image-ids ami-0d5eff06f840b45e9` and look for DeviceName
+        deviceName: '/dev/sda1', // Run `aws ec2 describe-images --region us-east-1 --image-ids ami-0d5eff06f840b45e9` and look for DeviceName
         volume: ec2.BlockDeviceVolume.ebs(64), // Override the volume size in Gibibytes (GiB)
       }]
     });
