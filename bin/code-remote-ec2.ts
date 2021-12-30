@@ -7,7 +7,7 @@ import * as cdk from 'aws-cdk-lib';
 import { CodeRemoteEc2Stack } from '../lib/code-remote-ec2-stack';
 
 const app = new cdk.App();
-new CodeRemoteEc2Stack(app, 'CodeRemoteEc2Stack', {
+new CodeRemoteEc2Stack(app, `${process.env.PROJECT_NAME}Stack`, {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */

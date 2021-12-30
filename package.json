@@ -9,7 +9,7 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "deploy": "cdk bootstrap --profile almeynman && cdk deploy --profile almeynman",
+    "deploy": "cdk bootstrap --profile almeynman && cdk deploy --profile almeynman --all",
     "destroy": "cdk destroy --profile almeynman"
   },
   "devDependencies": {
