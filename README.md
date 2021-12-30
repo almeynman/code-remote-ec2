@@ -33,7 +33,7 @@ sudo apt update
 sudo apt-get install build-essential
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
-nvm install v14.17.0
+nvm install 14.17.0
 echo 'export NPM_TOKEN=<your-npm-token>' >> ~/.bashrc
 source ~/.bashrc
 npm install --global yarn
