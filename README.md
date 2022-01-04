@@ -31,23 +31,40 @@ Open terminal and run below commands on instance
 ```
 sudo apt update
 sudo apt-get install build-essential
+
+# nvm, npm, node, yarn
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
 nvm install 14.17.0
 echo 'export NPM_TOKEN=<your-npm-token>' >> ~/.bashrc
 source ~/.bashrc
 npm install --global yarn
+
+# docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# repo
 git clone https://<github-user>:<personal-token>@github.com/<username>/<repository-name>.git
 cd <repository-name>
 ```
+
+Reboot your instance
 
 Now in VS Code you can open your repository
 
 Follow instructions from your repository
 
-Set up Docker following [this instructions](https://docs.docker.com/engine/install/ubuntu/)
-
-
 # Change AMI Image
 
 You might want to deploy a different [AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) image if you change AWS region or the OS of the image. For this modify [this line](https://github.com/almeynman/code-remote-ec2/blob/ac4dab34b32fab4689e4101eccf2442e65b24bfa/lib/code-remote-ec2-stack.ts#L47). [AMI selection](https://cloud-images.ubuntu.com/locator/ec2/)
+
+
+
+
+
+
