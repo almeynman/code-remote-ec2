@@ -4,7 +4,7 @@ This [CDK app](https://github.com/aws/aws-cdk) deploys Ubuntu machine and explai
 
 # Setup
 
-Create ec2 key pair and save locally on your machine
+Create ec2 key pair on AWS side and save locally on your machine
 update key name in .env file
 
 Also populate your AWS Account Number and region in .env file
